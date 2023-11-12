@@ -1,4 +1,4 @@
-% main.m
+% main.m https://zhuanlan.zhihu.com/p/605184617
 clear;clc
 
 global Nx dimPk NumGLP
