@@ -24,7 +24,7 @@ for i = 1:Nx              % 对所有对单元上的
 end
 
 for i = 1:Nx              % 对所有对单元上对
-    for d = 2:dimPk       % 所有型函数
+    for d = 2:dimPk       % 因为0阶为常数，导数为0 ，所以从2开始
         for i1 = 1:NumGLP % 所有积分点，计算积分结果
             du(i,d) = du(i,d) + 0.5*weight(i1)*f(uhG(i,i1))*phixG(i1,d);
         end
