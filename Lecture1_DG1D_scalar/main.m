@@ -1,4 +1,7 @@
-% main.m https://zhuanlan.zhihu.com/p/605184617
+% main.m
+% 参考文章：
+%1. https://zhuanlan.zhihu.com/p/605184617
+%2. https://zhuanlan.zhihu.com/p/604524727
 clear;clc
 
 global Nx dimPk NumGLP

@@ -1,6 +1,6 @@
 % get_basis.m
 global phiG phixG mm phiGR phiGL
-phiG = zeros(NumGLP,dimPk);         % 型函数
+phiG = zeros(NumGLP,dimPk);         % 型函数,3个型函数为：1. \phi0=1;2. \phi1=x; 3. \phi2=x^2-1/3
 phixG = zeros(NumGLP,dimPk);        % 型函数的导数
 phiGR = zeros(1,dimPk);
 phiGL = zeros(1,dimPk);
