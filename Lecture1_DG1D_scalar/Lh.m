@@ -17,7 +17,7 @@ if bcR == 1
 end
 
 % Step 1: calculate the Integral in cell
-for i = 1:Nx                                      % 对所有对单元上的 #具体解释见#issue6
+for i = 1:Nx                                      % 对所有对单元上的 #具体解释见#issue6，这里uhG计算的是解的值，不是系数
     for d = 1:dimPk                               % 所有型函数进行计算，并累加到uhG上。进行对是所有型函数对累加
         uhG(i,:) = uhG(i,:) + uh(i,d)*phiG(:,d)'; % 这里计算的是f(u)中的u,uh只是系数，下面才是计算的积分
     end
@@ -31,9 +31,9 @@ for i = 1:Nx              % 对所有对单元上对
     end
 end
 
-% Step 2: calculate the flux at edge
+% Step 2: calculate the flux at edge， uhR,uhL都是解的结果，不是系数
 for i = 1:Nx + 1          % 对所有对网格节点（不是有限元点，没有网格中间的那个点），注意这里的uhR，uhL是相对于单元来说的
-    for d = 1:dimPk       % 计算所有的型函数
+    for d = 1:dimPk       % 计算所有的型函数的叠加
         uhR(i) = uhR(i) + uhb(i,d)*phiGR(d);          % 累加所有型函数的结果
         uhL(i) = uhL(i) + uhb(i + 1,d)*phiGL(d);      % 累加所有型函数的结果 而 flux 函数中的 u-，u+(程序中为 uL 和 uR )是相对于那个端点而言的左值和右值
     end

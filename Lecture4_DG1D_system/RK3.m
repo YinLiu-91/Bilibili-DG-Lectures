@@ -28,7 +28,7 @@ while t < tend
     elseif Limit_type == 2
         uh1 = TVD_Limiter_P2(uh1);
     end
-    uh1 = pp_Limiter(uh1);
+    %uh1 = pp_Limiter(uh1);
     
     % Stage II
     du = Lh(uh1);
@@ -38,7 +38,7 @@ while t < tend
     elseif Limit_type == 2
         uh2 = TVD_Limiter_P2(uh2);
     end
-    uh2 = pp_Limiter(uh2);
+    %uh2 = pp_Limiter(uh2);
     
     % Stage III
     du = Lh(uh2);
@@ -48,7 +48,7 @@ while t < tend
     elseif Limit_type == 2
         uh = TVD_Limiter_P2(uh);
     end
-    uh = pp_Limiter(uh);
+    %uh = pp_Limiter(uh);
     
     fprintf('%d  %d  %d\n',t,min(uh(:,1,1)),max(abs(uh(:,1,1))))
      

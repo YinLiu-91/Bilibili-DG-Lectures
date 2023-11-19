@@ -1,6 +1,6 @@
 % init_data.m
 global bcL bcR hx hx1 M gamma
-
+% https://zhuanlan.zhihu.com/p/623709134
 %----------------
 xa = 0;
 xb = 1;
@@ -11,6 +11,7 @@ rho = @(x) rho0(x);%1 + 0.2*sin(x);
 u = @(x) u0(x);%1 + 0.*x;
 p = @(x) p0(x);%1 + 0.*x;
 
+% 变量的含义
 U1 = @(x) rho(x); % rho
 U2 = @(x) rho(x).*u(x); % rho u
 U3 = @(x) p(x)./(gamma - 1) + 0.5*rho(x).*u(x).^2; % E
