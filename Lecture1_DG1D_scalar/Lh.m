@@ -17,9 +17,9 @@ if bcR == 1
 end
 
 % Step 1: calculate the Integral in cell
-for i = 1:Nx              % 对所有对单元上的
-    for d = 1:dimPk       % 所有型函数进行计算，并累加到uhG上。进行对是所有型函数对累加
-        uhG(i,:) = uhG(i,:) + uh(i,d)*phiG(:,d)';
+for i = 1:Nx                                      % 对所有对单元上的 #具体解释见#issue6
+    for d = 1:dimPk                               % 所有型函数进行计算，并累加到uhG上。进行对是所有型函数对累加
+        uhG(i,:) = uhG(i,:) + uh(i,d)*phiG(:,d)'; % 这里计算的是f(u)中的u,uh只是系数，下面才是计算的积分
     end
 end
 
