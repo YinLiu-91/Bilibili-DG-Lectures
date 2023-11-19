@@ -14,7 +14,7 @@ M = 1;
 hx = (xb - xa)/Nx;
 hx1 = 0.5*hx;
 
-Xc = xa + hx1:hx:xb - hx1;
+Xc = xa + hx1:hx:xb - hx1;  % 单元中点坐标
 
 ureal = zeros(Nx,NumGLP);
 for i = 1:Nx

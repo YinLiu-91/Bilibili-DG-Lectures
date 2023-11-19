@@ -14,5 +14,5 @@ for i = 1:Nx
 end
 % plot(uh(:,1))
 for d = 1:dimPk
-    uh(:,d) = uh(:,d)/mm(d);  % mm在get_basis.m中定义
+    uh(:,d) = uh(:,d)/mm(d);  % mm在get_basis.m中定义, 这里看出，uh只是多项式的系数，并不是解
 end
