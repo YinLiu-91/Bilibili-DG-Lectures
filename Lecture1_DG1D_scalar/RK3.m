@@ -32,8 +32,7 @@ while t < tend
     if(mod(floor(t/dt),nsaveT)==0)
       i=i+1;
       % 在单元[-1,0,1]的三个位置处计算最终的求解变量结果
-      %saved(i,:,:)=[uh(:,1)-uh(:,2)+2/3*uh(:,3) uh(:,1)-1/3*uh(:,3) uh(:,1)+uh(:,2)+2/3*uh(:,3)];
-      saved(i,:,:)=uh;
+      saved(i,:,:)=[uh(:,1)-uh(:,2)+2/3*uh(:,3) uh(:,1)-1/3*uh(:,3) uh(:,1)+uh(:,2)+2/3*uh(:,3)];
     end
 
 end
